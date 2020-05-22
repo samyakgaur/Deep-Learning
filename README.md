@@ -1,4 +1,4 @@
-# Deep-Learning From Scratch
+# Deep Learning From Scratch
 
 🌟 Learning Deep Learning concepts using python, numpy 🌟
 
@@ -35,7 +35,7 @@ git clone <url>
 ## Contributers 🌟
 
 <a href="https://github.com/samyakgaur">
-  <img src="https://github.com/RyanDsilva.png?size=75" style="border-radius:50%">
+  <img src="https://github.com/samyakgaur.png?size=75" style="border-radius:50%">
 </a>
 
 ## References 📚
