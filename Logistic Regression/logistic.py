@@ -10,7 +10,7 @@ import cv2
 
 img = cv2.imread("samyakgaur.jpg")   # reads an image in the BGR format
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)   # BGR -> RGB
-img=img.reshape(64*64*3,1)
+img=img.reshape(img.shape[0]*img.shape[1]*3,1)
 print(img.shape)
 
 def load_dataset():
@@ -48,10 +48,13 @@ def load_dataset():
 train_set_x_orig, train_set_y, test_set_x_orig, test_set_y, classes  =  load_dataset()
 
 ## Step 2. Viewing labelled dataset
-index=11
-plt.imshow(train_set_x_orig[index])
-print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(train_set_y[:, index])].decode("utf-8") +  "' picture.")
-# plt.show()
+'''
+    - Uncomment the following code to view image.
+        index=11
+        plt.imshow(train_set_x_orig[index])
+        print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(train_set_y[:, index])].decode("utf-8") +  "' picture.")
+        plt.show()
+'''
 
 ## Step 3. Reshaping the image array to be a numpy array of (numpy_x * numpy_x *3 , 1 )
 ''' each column represents one image.
@@ -65,7 +68,6 @@ print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(t
 '''
 train_set_x_flatten = train_set_x_orig.reshape(train_set_x_orig.shape[0],-1).T
 test_set_x_flatten  = test_set_x_orig.reshape(test_set_x_orig.shape[0],-1).T
-
 #Standardizing data by subtracting the mean from the np.array
 train_set_x = train_set_x_flatten/255
 test_set_x = test_set_x_flatten/255
@@ -99,7 +101,6 @@ def propagate(w,b,X,Y):
     #Forward Propagation
     A  =  sigmoid(np.dot(w.T,X)+b)
     cost = -1./m* np.sum(Y*np.log(A) + (1-Y)*np.log(1-A)) #calculation the avg devaition from the actual value
-
     #Backward Propagation
     dw = 1./m*np.dot(X, (A-Y).T)
     db = 1./m*np.sum(A-Y)
@@ -200,7 +201,7 @@ def model(X_train,Y_train,X_test,Y_test,num_iterations=2000,learning_rate=0.5):
 
     #Testing on my image
     prediction =  sigmoid(np.dot(w.T, img) + b)
-    print("My Picture"+str(prediction[0]))
+    print("My Picture : "+str((prediction[0]>0.5) and "is a cat picture" or "not a cat picture"))
 
 
     d = {

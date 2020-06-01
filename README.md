@@ -13,7 +13,7 @@
 ```bash
 git clone <url>
 ```
-
+- Every module has a setup.md file for further instructions.
 
 ## Usage 📔
 
