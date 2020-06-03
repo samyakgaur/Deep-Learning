@@ -10,3 +10,8 @@ To setup the code follow the following steps:
      virtualenv venv
      source/bin/activate
      ```
+   * #### For Windows
+     ```
+     virtualenv venv
+     venv\Scripts\activate
+     ```
