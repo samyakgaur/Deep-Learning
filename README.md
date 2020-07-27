@@ -17,7 +17,7 @@ git clone <url>
 
 ## Usage 📔
 
-- Open the .pynb files in jupyter notebook
+- Open the .pynb files in jupyter notebook.
 
 
 ## Roadmap 📑
