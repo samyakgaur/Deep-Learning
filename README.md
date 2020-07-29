@@ -40,7 +40,7 @@ git clone <url>
 
 ## References 📚
 
-- Deep Learning Specialization, Andrew NG - Coursera
+- Deep Learning Specialization, Andrew NG - Coursera.
 - [Machine Learning Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
 
 > &copy; 2020 Samyak Gaur
