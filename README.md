@@ -11,7 +11,7 @@
 ## Setup 💻
 
 ```bash
-git clone <url>
+git clone https://github.com/samyakgaur/Deep-Learning.git
 ```
 - Every module has a setup.md file for further instructions.
 
