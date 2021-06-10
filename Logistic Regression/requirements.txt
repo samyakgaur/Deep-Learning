@@ -1,6 +1,6 @@
 asgiref==3.2.7
 cycler==0.10.0
-Django==3.0.6
+Django==3.1.12
 h5py==2.10.0
 image==1.5.31
 kiwisolver==1.2.0
